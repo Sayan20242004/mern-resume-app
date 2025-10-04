@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000/api" }); // backend URL
+const API = axios.create({ baseURL: process.env.REACT_API_APP_URL }); // backend URL
 
 export const createResume = (data) => API.post("/resumes", data); // no userId needed
 export const getAllResumes = () => API.get("/resumes"); // fetch all resumes
